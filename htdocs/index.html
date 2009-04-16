@@ -3,18 +3,18 @@
     <head>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <link rel="stylesheet" href="http://blog.livedoor.jp/dankogai/google/prettify.css" type="text/css">
-        <title>Hatetter - Hatena::Bookmark を Twitter Client で見よう！</title>
+        <title>Hatetter - はてなお気に入りアンテナ を Twitter Client で見よう！</title>
     </head>
     <body style="padding:0.5em; width:980px">
         <h1>
             Hatetter
             <a href="http://b.hatena.ne.jp/entry/http://hatetter.blogdb.jp/index.html"><img src="http://b.hatena.ne.jp/entry/image/normal/http://hatetter.blogdb.jp/index.html"></a>
         </h1>
-        <p>このサービスは、はてなブックマークの各IDのお気に入りリストのRSS FeedをTwitter APIが出力する形式に変換を行うサービスです。</p>
+        <p>このサービスは、はてなお気に入りアンテナの各IDのお気に入りリストのRSS FeedをTwitter APIが出力する形式に変換を行うサービスです。</p>
         <p>既存のTwitter ClientのAPI endpointを http://hatetter.blogdb.jp/yappo/ などに変更する事で、簡単にはてなブックマークのお気に入りリストに入れた人のブックマークをTwitter風のPOSTとして見ることが出来ます。</p>
 
         <h2>お知らせ</h2>
-        <p>今はお気に入りのブックマークだけですが、お気に入りアンテナに変更する予定です。</p>
+        <p>お気に入りのブックマークから、お気に入りアンテナを使うように変更されました。</p>
 
         <h2>使い方</h2>
         <p>
@@ -27,7 +27,7 @@
             JSONPも使えます
             <pre>http://hatetter.blogdb.jp/はてなユーザID/statuses/friends_timeline.json?callback=CallbackFunction</pre>
         </p>
-        <p>はてなブックマークへは1つのIDごとに5分に1回しか情報更新しませんので、間隔を短くアクセスしても意味はありません。</p>
+        <p>はてなブックは1つのIDごとに5分に1回しか情報更新しませんので、間隔を短くアクセスしても意味はありません。</p>
 
         <h2>その他</h2>
         <p>このサービスのソースコード一式は<a href="http://github.com/yappo/website-hatetter/tree">http://github.com/yappo/website-hatetter/tree</a>にあります、ご自宅に設置なり何なりどうぞご自由に。</p>
