@@ -20,7 +20,7 @@ my $web = Hatetter::Web->new;
 HTTP::Engine->new(
     interface => {
         module          => 'ServerSimple',
-        args            => { port => '8107' },
+        args            => { host => '0.0.0.0', port => '8107' },
         request_handler => $mw->handler(sub {
             my $req = shift;
             $web->handler($req);
