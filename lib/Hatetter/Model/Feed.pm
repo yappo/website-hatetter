@@ -51,6 +51,7 @@ sub _to_timeline {
         created_at            => $args->{created_at},
         id                    => $args->{id},
         text                  => $args->{text},
+        user_login_id         => $args->{author},
         source                => $args->{source},
         truncated             => 'false',
         favorited             => '',

@@ -29,6 +29,7 @@ is_deeply($timeline, [
             'id' => 'example-1',
             'screen_name' => 'example-1'
         },
+        'user_login_id' => 'example-1',
         'id' => 'example-1:1239860385'
     },
     {
@@ -48,6 +49,7 @@ is_deeply($timeline, [
             'id' => 'example-2',
             'screen_name' => 'example-2'
         },
+        'user_login_id' => 'example-2',
         'id' => 'example-2:1239858875'
     },
     {
@@ -67,6 +69,7 @@ is_deeply($timeline, [
             'id' => 'example-3',
             'screen_name' => 'example-3'
         },
+        'user_login_id' => 'example-3',
         'id' => 'example-3:1239846715'
     },
     {
@@ -86,6 +89,7 @@ is_deeply($timeline, [
             'id' => 'jkondo',
             'screen_name' => 'jkondo'
         },
+        'user_login_id' => 'jkondo',
         'id' => 'jkondo:1239839250'
     },
     {
@@ -105,6 +109,7 @@ is_deeply($timeline, [
             'id' => 'example-4',
             'screen_name' => 'example-4'
         },
+        'user_login_id' => 'example-4',
         'id' => 'example-4:1239810645'
     },
     {
@@ -124,13 +129,14 @@ is_deeply($timeline, [
             'id' => 'example-4',
             'screen_name' => 'example-4'
         },
+        'user_login_id' => 'example-4',
         'id' => 'example-4:1239727107'
     }
 ], 'twitter convert');
 
 my $json = Hatetter::Model::Feed->to_json($feed);
 is("$json\n", <<'END', 'to_json');
-[{"truncated":"false","source":"\u306f\u3066\u306a\u30d6\u30c3\u30af\u30de\u30fc\u30af","favorited":"","created_at":"Thu Apr 16 14:39:45 +0900 2009","text":"[\u30d6\u30c3\u30af\u30de] http://example.com/2009/04/ssd.html | ssd  - \u6700\u524d\u7dda","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-1/profile.gif","name":"example-1","description":"","url":"","id":"example-1","screen_name":"example-1"},"id":"example-1:1239860385"},{"truncated":"false","source":"\u306f\u3066\u306a\u30c0\u30a4\u30a2\u30ea\u30fc","favorited":"","created_at":"Thu Apr 16 14:14:35 +0900 2009","text":"[\u30c0\u30a4\u30a2\u30ea] http://d.hatena.ne.jp/example-2/20090416/1239858875 |  \u65e5\u8a18\u306e\u3088\u3046\u3084\u304f\u3060\u3088\uff01 -  \u65e5\u8a18\u306e\u30bf\u30a4\u30c8\u30eb\u3060\u3088\uff01","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-2/profile.gif","name":"example-2","description":"","url":"","id":"example-2","screen_name":"example-2"},"id":"example-2:1239858875"},{"truncated":"false","source":"\u306f\u3066\u306a\u30b0\u30eb\u30fc\u30d7","favorited":"","created_at":"Thu Apr 16 10:51:55 +0900 2009","text":"[\u30b0\u30eb\u30fc\u30d7] http://example.g.hatena.ne.jp/example-3/20090416/1239846715 |  \u306a\u3093\u3067\u30b0\u30eb\u30fc\u30d7\u306edescription\u306f \u3053\u3093\u306a\u5f62\u306b \u306a\u3063\u3066\u3093\u306d\u3093 \u306a\u3093\u3067\u306a\u3093\u3067\uff1f - \u30b0\u30eb\u30fc\u30d7\u306e\u65e5\u8a18\u30bf\u30a4\u30c8\u30eb","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-3/profile.gif","name":"example-3","description":"","url":"","id":"example-3","screen_name":"example-3"},"id":"example-3:1239846715"},{"truncated":"false","source":"\u306f\u3066\u306a\u30cf\u30a4\u30af","favorited":"","created_at":"Thu Apr 16 08:47:30 +0900 2009","text":"[\u30cf\u30a4\u30af] http://h.hatena.ne.jp/jkondo/9234279931701694716 |  - id:jkondo","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/jk/jkondo/profile.gif","name":"jkondo","description":"","url":"","id":"jkondo","screen_name":"jkondo"},"id":"jkondo:1239839250"},{"truncated":"false","source":"\u306f\u3066\u306a\u30d5\u30a9\u30c8\u30e9\u30a4\u30d5","favorited":"","created_at":"Thu Apr 16 00:50:45 +0900 2009","text":"[\u30d5\u30a9\u30c8\u30e9] http://f.hatena.ne.jp/example-4/20090416005045 |  - 20090416005045","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-4/profile.gif","name":"example-4","description":"","url":"","id":"example-4","screen_name":"example-4"},"id":"example-4:1239810645"},{"truncated":"false","source":"My\u306f\u3066\u306a","favorited":"","created_at":"Wed Apr 15 01:38:27 +0900 2009","text":"[My\u306f\u3066] http://www.hatena.ne.jp/example-4/ |  example-4\u3055\u3093\u304c\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u3092\u66f4\u65b0\u3057\u307e\u3057\u305f - example-4\u3055\u3093\u304c\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u3092\u66f4\u65b0\u3057\u307e\u3057\u305f","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-4/profile.gif","name":"example-4","description":"","url":"","id":"example-4","screen_name":"example-4"},"id":"example-4:1239727107"}]
+[{"truncated":"false","source":"\u306f\u3066\u306a\u30d6\u30c3\u30af\u30de\u30fc\u30af","favorited":"","created_at":"Thu Apr 16 14:39:45 +0900 2009","user_login_id":"example-1","text":"[\u30d6\u30c3\u30af\u30de] http://example.com/2009/04/ssd.html | ssd  - \u6700\u524d\u7dda","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-1/profile.gif","name":"example-1","description":"","url":"","id":"example-1","screen_name":"example-1"},"id":"example-1:1239860385"},{"truncated":"false","source":"\u306f\u3066\u306a\u30c0\u30a4\u30a2\u30ea\u30fc","favorited":"","created_at":"Thu Apr 16 14:14:35 +0900 2009","user_login_id":"example-2","text":"[\u30c0\u30a4\u30a2\u30ea] http://d.hatena.ne.jp/example-2/20090416/1239858875 |  \u65e5\u8a18\u306e\u3088\u3046\u3084\u304f\u3060\u3088\uff01 -  \u65e5\u8a18\u306e\u30bf\u30a4\u30c8\u30eb\u3060\u3088\uff01","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-2/profile.gif","name":"example-2","description":"","url":"","id":"example-2","screen_name":"example-2"},"id":"example-2:1239858875"},{"truncated":"false","source":"\u306f\u3066\u306a\u30b0\u30eb\u30fc\u30d7","favorited":"","created_at":"Thu Apr 16 10:51:55 +0900 2009","user_login_id":"example-3","text":"[\u30b0\u30eb\u30fc\u30d7] http://example.g.hatena.ne.jp/example-3/20090416/1239846715 |  \u306a\u3093\u3067\u30b0\u30eb\u30fc\u30d7\u306edescription\u306f \u3053\u3093\u306a\u5f62\u306b \u306a\u3063\u3066\u3093\u306d\u3093 \u306a\u3093\u3067\u306a\u3093\u3067\uff1f - \u30b0\u30eb\u30fc\u30d7\u306e\u65e5\u8a18\u30bf\u30a4\u30c8\u30eb","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-3/profile.gif","name":"example-3","description":"","url":"","id":"example-3","screen_name":"example-3"},"id":"example-3:1239846715"},{"truncated":"false","source":"\u306f\u3066\u306a\u30cf\u30a4\u30af","favorited":"","created_at":"Thu Apr 16 08:47:30 +0900 2009","user_login_id":"jkondo","text":"[\u30cf\u30a4\u30af] http://h.hatena.ne.jp/jkondo/9234279931701694716 |  - id:jkondo","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/jk/jkondo/profile.gif","name":"jkondo","description":"","url":"","id":"jkondo","screen_name":"jkondo"},"id":"jkondo:1239839250"},{"truncated":"false","source":"\u306f\u3066\u306a\u30d5\u30a9\u30c8\u30e9\u30a4\u30d5","favorited":"","created_at":"Thu Apr 16 00:50:45 +0900 2009","user_login_id":"example-4","text":"[\u30d5\u30a9\u30c8\u30e9] http://f.hatena.ne.jp/example-4/20090416005045 |  - 20090416005045","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-4/profile.gif","name":"example-4","description":"","url":"","id":"example-4","screen_name":"example-4"},"id":"example-4:1239810645"},{"truncated":"false","source":"My\u306f\u3066\u306a","favorited":"","created_at":"Wed Apr 15 01:38:27 +0900 2009","user_login_id":"example-4","text":"[My\u306f\u3066] http://www.hatena.ne.jp/example-4/ |  example-4\u3055\u3093\u304c\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u3092\u66f4\u65b0\u3057\u307e\u3057\u305f - example-4\u3055\u3093\u304c\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u3092\u66f4\u65b0\u3057\u307e\u3057\u305f","user":{"location":"","followers_count":1,"protected":"false","profile_image_url":"http://www.hatena.ne.jp/users/ex/example-4/profile.gif","name":"example-4","description":"","url":"","id":"example-4","screen_name":"example-4"},"id":"example-4:1239727107"}]
 END
 
 my $xml = Hatetter::Model::Feed->to_xml($feed);
@@ -155,6 +161,7 @@ is($xml, <<'END', 'to_xml');
       <screen_name>example-1</screen_name>
       <url></url>
     </user>
+    <user_login_id>example-1</user_login_id>
   </status>
   <status>
     <id>example-2:1239858875</id>
@@ -174,6 +181,7 @@ is($xml, <<'END', 'to_xml');
       <screen_name>example-2</screen_name>
       <url></url>
     </user>
+    <user_login_id>example-2</user_login_id>
   </status>
   <status>
     <id>example-3:1239846715</id>
@@ -193,6 +201,7 @@ is($xml, <<'END', 'to_xml');
       <screen_name>example-3</screen_name>
       <url></url>
     </user>
+    <user_login_id>example-3</user_login_id>
   </status>
   <status>
     <id>jkondo:1239839250</id>
@@ -212,6 +221,7 @@ is($xml, <<'END', 'to_xml');
       <screen_name>jkondo</screen_name>
       <url></url>
     </user>
+    <user_login_id>jkondo</user_login_id>
   </status>
   <status>
     <id>example-4:1239810645</id>
@@ -231,6 +241,7 @@ is($xml, <<'END', 'to_xml');
       <screen_name>example-4</screen_name>
       <url></url>
     </user>
+    <user_login_id>example-4</user_login_id>
   </status>
   <status>
     <id>example-4:1239727107</id>
@@ -250,6 +261,7 @@ is($xml, <<'END', 'to_xml');
       <screen_name>example-4</screen_name>
       <url></url>
     </user>
+    <user_login_id>example-4</user_login_id>
   </status>
 </statuses>
 END
