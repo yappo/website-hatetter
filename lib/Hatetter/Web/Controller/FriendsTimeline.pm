@@ -34,6 +34,13 @@ sub json {
     my $res = $self->_generator($c, $args->{id}, $c->model_queue->TYPE_JSON);
     $res->body('[]') unless $res->body;
     $res->content_type('application/json; charset=UTF-8');
+
+    # for josnp
+    if (my $callback = $req->param('callback')) {
+        if ($callback =~ /^[a-zA-Z0-9\.\_\[\]]+$/) {
+            $res->body(sprintf '%s(%s);', $callback, $res->body);
+        }
+    }
     $res;
 }
 
