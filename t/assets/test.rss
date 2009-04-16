@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:opensearch="http://a9.com/-/spec/opensearchrss/1.0/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#"
+ xmlns:media="http://search.yahoo.com/mrss"
+>
+  <channel rdf:about="http://b.hatena.ne.jp/hotentry/favorite">
+    <title>はてなブックマーク - hotentryのブックマーク - お気に入り</title>
+    <link>http://b.hatena.ne.jp/hotentry/favorite</link>
+    <description>お気に入り</description>
+
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://b.hatena.ne.jp/example/20090415#bookmark-12958965" />
+        <rdf:li rdf:resource="http://b.hatena.ne.jp/example2/20090415#bookmark-12946547" />
+        <rdf:li rdf:resource="http://b.hatena.ne.jp/example3/20090415#bookmark-12960709" />
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://b.hatena.ne.jp/example/20090415#bookmark-12958965">
+    <title>エントリタイトル</title>
+    <link>http://www.example.com/</link>
+    <description>すばらしい。私はこういうのを待っていた。</description>
+    <content:encoded>本文は使わないよ</content:encoded>
+    <dc:creator>example</dc:creator>
+    <dc:date>2009-04-15T08:55:02+09:00</dc:date>
+    <dc:subject>geek</dc:subject>
+    <dc:subject>hatena</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li resource="http://b.hatena.ne.jp/t/geek" />
+        <rdf:li resource="http://b.hatena.ne.jp/t/hatena" />
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://b.hatena.ne.jp/example2/20090415#bookmark-12946547">
+    <title>がはは</title>
+    <link>http://internet.watch.example.co.jp/</link>
+    <description></description>
+    <content:encoded>バキューム</content:encoded>
+    <dc:creator>example2</dc:creator>
+    <dc:date>2009-04-15T08:50:44+09:00</dc:date>
+    <dc:subject>web</dc:subject>
+    <taxo:topics>
+      <rdf:Bag>
+        <rdf:li resource="http://b.hatena.ne.jp/t/web" />
+      </rdf:Bag>
+    </taxo:topics>
+  </item>
+  <item rdf:about="http://b.hatena.ne.jp/example3/20090415#bookmark-12960709">
+    <title>nntp.perl.example.org</title>
+    <link>http://www.nntp.perl.example.org/group/perl.moose/2009/04/msg683.html</link>
+    <description></description>
+    <content:encoded>本気</content:encoded>
+    <dc:creator>example3</dc:creator>
+    <dc:date>2009-04-15T08:36:12+09:00</dc:date>
+  </item>
+</rdf:RDF>
