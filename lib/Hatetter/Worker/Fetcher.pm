@@ -69,10 +69,14 @@ sub running {
                 } else {
                     return; # wtf?
                 }
-                my $data = $self->feed->$method($res->content);
-                if ($data) {
-                    if ($self->memcached->set('contents:' . $row->type . ':' . $row->id, $data)) {
-                        $success = 1;
+                my $data = eval { $self->feed->$method($res->content) };
+                if ($@) {
+                    warn $@;
+                } else {
+                    if ($data) {
+                        if ($self->memcached->set('contents:' . $row->type . ':' . $row->id, $data)) {
+                            $success = 1;
+                        }
                     }
                 }
             }

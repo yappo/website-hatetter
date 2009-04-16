@@ -11,8 +11,10 @@ my $hatena = decode('utf8', 'はてな');
 sub convert {
     my($class, $xml) = @_;
 
-    my $feed = XML::Feed->parse(\$xml)
-        or die XML::Feed->errstr;
+    my $feed = XML::Feed->parse(\$xml);
+    unless ($feed) {
+        die XML::Feed->errstr;
+    }
 
     my @timeline;
     for my $entry ($feed->entries) {
