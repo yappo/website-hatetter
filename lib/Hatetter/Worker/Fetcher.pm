@@ -57,7 +57,7 @@ sub running {
             my $row = shift;
             $retry = $row->retry;
 
-            my $res = $self->ua->get(sprintf 'http://b.hatena.ne.jp/%s/favorite.rss', $row->id);
+            my $res = $self->ua->get(sprintf 'http://www.hatena.ne.jp/%s/antenna.rss', $row->id);
             my $success = 0;
 
             if ($res->is_success) {

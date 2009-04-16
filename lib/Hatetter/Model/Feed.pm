@@ -4,6 +4,9 @@ use Mouse;
 use JSON::XS ();
 use XML::Feed;
 use XML::Simple ();
+use Encode;
+
+my $hatena = decode('utf8', 'はてな');
 
 sub convert {
     my($class, $xml) = @_;
@@ -17,11 +20,19 @@ sub convert {
         my $time   = $entry->issued->epoch;
         my $author = $entry->author;
 
+        my $description = substr(($entry->{entry}->{description} || ''), 0, 100);
+        $description =~ s/[\r\n]//g;
+        $description =~ s/\s+/ /g;
+        my $subject = $entry->{entry}->{dc}->{subject};
+        $subject =~ s/^$hatena//;
+        $subject = substr $subject, 0, 4;
+
         my $timeline = $class->_to_timeline({
             id         => "$author:$time",
             author     => $author,
             created_at => $entry->issued->strftime('%a %b %d %T %z %Y'),
-            text       => sprintf('%s %s', $entry->{entry}->{description} || '', $entry->link),
+            text       => sprintf('[%s] %s | %s - %s', $subject, $entry->link, $description, ($entry->title || '')),
+            source     => $entry->{entry}->{dc}->{subject},
         });
 
         push @timeline, $timeline;
@@ -38,7 +49,7 @@ sub _to_timeline {
         created_at            => $args->{created_at},
         id                    => $args->{id},
         text                  => $args->{text},
-        source                => 'Hatena::Bookmark',
+        source                => $args->{source},
         truncated             => 'false',
         favorited             => '',
         user => {

@@ -16,7 +16,7 @@ BEGIN {
 }
 
 my $feed = do {
-    open my $fh, File::Spec->catfile(qw/ t assets test.rss /) or die $!;
+    open my $fh, File::Spec->catfile(qw/ t assets antenna.rss /) or die $!;
     local $/;
     <$fh>
 };
@@ -64,7 +64,7 @@ do {
     no warnings 'redefine';
     *LWP::UserAgent::request = sub {
         my($self, $request, $arg, $size, $previous) = @_;
-        is($request->uri, 'http://b.hatena.ne.jp/example/favorite.rss', 'request uri');
+        is($request->uri, 'http://www.hatena.ne.jp/example/antenna.rss', 'request uri');
         my $res = HTTP::Response->new( 200 );
         $res->content( $feed );
         $res;
@@ -92,7 +92,7 @@ do {
     no warnings 'redefine';
     *LWP::UserAgent::request = sub {
         my($self, $request, $arg, $size, $previous) = @_;
-        is($request->uri, 'http://b.hatena.ne.jp/example/favorite.rss', "request uri: times");
+        is($request->uri, 'http://www.hatena.ne.jp/example/antenna.rss', "request uri: times");
         HTTP::Response->new( 500, '' );
     };
 

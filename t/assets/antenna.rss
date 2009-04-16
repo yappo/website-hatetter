@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel rdf:about="http://www.hatena.ne.jp/yappo/antenna">
+    <link>http://www.hatena.ne.jp/example/antenna</link>
+    <description/>
+    <title>exampleさんのお気に入りアンテナ</title>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://example.com/2009/04/ssd.html"/>
+        <rdf:li rdf:resource="http://d.hatena.ne.jp/example-2/20090416/1239858875"/>
+        <rdf:li rdf:resource="http://example.g.hatena.ne.jp/example-3/20090416/1239846715"/>
+        <rdf:li rdf:resource="http://h.hatena.ne.jp/jkondo/9234279931701694716"/>
+        <rdf:li rdf:resource="http://f.hatena.ne.jp/example-4/20090416005045"/>
+        <rdf:li rdf:resource="http://www.hatena.ne.jp/example-4/"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://example.com/2009/04/ssd.html">
+    <link>http://example.com/2009/04/ssd.html</link>
+    <dc:date>2009-04-16T14:39:45+09:00</dc:date>
+    <description>ssd </description>
+    <dc:creator>example-1</dc:creator>
+    <dc:subject>はてなブックマーク</dc:subject>
+    <title>最前線</title>
+    <content:encoded>引用テキスト</content:encoded>
+  </item>
+  <item rdf:about="http://d.hatena.ne.jp/example-2/20090416/1239858875">
+    <link>http://d.hatena.ne.jp/example-2/20090416/1239858875</link>
+    <dc:date>2009-04-16T14:14:35+09:00</dc:date>
+    <description> 日記のようやくだよ！</description>
+    <dc:creator>example-2</dc:creator>
+    <dc:subject>はてなダイアリー</dc:subject>
+    <title> 日記のタイトルだよ！</title>
+    <content:encoded>日記の本文ですね</content:encoded>
+  </item>
+  <item rdf:about="http://example.g.hatena.ne.jp/example-3/20090416/1239846715">
+    <link>http://example.g.hatena.ne.jp/example-3/20090416/1239846715</link>
+    <dc:date>2009-04-16T10:51:55+09:00</dc:date>
+    <description>
+			なんでグループのdescriptionは
+			こんな形に
+			なってんねん
+			なんでなんで？
+</description>
+    <dc:creator>example-3</dc:creator>
+    <dc:subject>はてなグループ</dc:subject>
+    <title>グループの日記タイトル</title>
+    <content:encoded/>
+  </item>
+  <item rdf:about="http://h.hatena.ne.jp/jkondo/9234279931701694716">
+    <link>http://h.hatena.ne.jp/jkondo/9234279931701694716</link>
+    <dc:date>2009-04-16T08:47:30+09:00</dc:date>
+    <description/>
+    <dc:creator>jkondo</dc:creator>
+    <dc:subject>はてなハイク</dc:subject>
+    <title>id:jkondo</title>
+    <content:encoded/>
+  </item>
+  <item rdf:about="http://f.hatena.ne.jp/example-4/20090416005045">
+    <link>http://f.hatena.ne.jp/example-4/20090416005045</link>
+    <dc:date>2009-04-16T00:50:45+09:00</dc:date>
+    <description/>
+    <dc:creator>example-4</dc:creator>
+    <dc:subject>はてなフォトライフ</dc:subject>
+    <title>20090416005045</title>
+    <content:encoded>&lt;a href="http://f.hatena.ne.jp/example-4/20090416005045"&gt;&lt;/a&gt;</content:encoded>
+  </item>
+  <item rdf:about="http://www.hatena.ne.jp/example-4/">
+    <link>http://www.hatena.ne.jp/example-4/</link>
+    <dc:date>2009-04-15T01:38:27+09:00</dc:date>
+    <description> example-4さんがプロフィールを更新しました</description>
+    <dc:creator>example-4</dc:creator>
+    <dc:subject>Myはてな</dc:subject>
+    <title>example-4さんがプロフィールを更新しました</title>
+    <content:encoded/>
+  </item>
+</rdf:RDF>
