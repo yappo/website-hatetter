@@ -72,6 +72,7 @@ sub running {
                 my $data = eval { $self->feed->$method($res->content) };
                 if ($@) {
                     warn $@;
+                    return if $@ =~ /Cannot detect feed type/; # HTML ?
                 } else {
                     if ($data) {
                         if ($self->memcached->set('contents:' . $row->type . ':' . $row->id, $data)) {
